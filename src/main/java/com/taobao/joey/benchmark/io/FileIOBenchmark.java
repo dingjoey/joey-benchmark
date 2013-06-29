@@ -55,9 +55,12 @@ public class FileIOBenchmark {
                 if (out == null) return;
 
                 try {
+                    Thread.sleep(500);
                     out.write(writeContent);
                     out.flush();
                 } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 stats.finishSingleOp();
