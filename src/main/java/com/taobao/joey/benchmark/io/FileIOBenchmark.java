@@ -55,7 +55,7 @@ public class FileIOBenchmark {
                 if (out == null) return;
 
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(1);
                     out.write(writeContent);
                     out.flush();
                 } catch (IOException e) {
